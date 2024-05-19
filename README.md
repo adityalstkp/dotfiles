@@ -4,7 +4,9 @@
 Dotfiles for sync across computers
 Managed by GNU `stow`. 
 
-MacOs
+----
+
+**MacOs**
 ```bash
 brew install stow
 
