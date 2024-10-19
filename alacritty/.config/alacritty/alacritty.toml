@@ -1,5 +1,16 @@
 [font]
 size = 15
+normal.family = "FiraCode Nerd Font"
+normal.style = "Medium"
+
+bold.family = "FiraCode Nerd Font"
+bold.style = "Bold"
+
+italic.family = "FiraCode Nerd Font"
+italic.style = "Retina"
+
+bold_italic.family = "FiraCode Nerd Font"
+bold_italic.style = "SemiBold"
 
 [[keyboard.bindings]]
 action = "SpawnNewInstance"
@@ -39,9 +50,14 @@ mode = "AppCursor"
 mods = "Command"
 
 [window]
+dimensions.columns = 160
+dimensions.lines = 45
+position.x = 75
+position.y = 130
 decorations = "buttonless"
-opacity = 0.95
-startup_mode = "Maximized"
+opacity = 0.9
+blur = true
+startup_mode = "Windowed"
 
 [window.padding]
 x = 5
