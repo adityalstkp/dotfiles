@@ -1,18 +1,18 @@
 [font]
 size = 15
 
-# font-fira-code-nerd-font
-normal.family = "FiraCode Nerd Font"
-normal.style = "Medium"
+# font-jetbrains-mono-nerd-font
+normal.family = "JetBrainsMono Nerd Font"
+normal.style = "SemiBold"
 
-bold.family = "FiraCode Nerd Font"
+bold.family = "JetBrainsMono Nerd Font"
 bold.style = "Bold"
 
-italic.family = "FiraCode Nerd Font"
-italic.style = "Retina"
+italic.family = "JetBrainsMono Nerd Font"
+italic.style = "Italic"
 
-bold_italic.family = "FiraCode Nerd Font"
-bold_italic.style = "SemiBold"
+bold_italic.family = "JetBrainsMono Nerd Font"
+bold_italic.style = "BoldItalic"
 
 [[keyboard.bindings]]
 action = "SpawnNewInstance"
@@ -55,9 +55,9 @@ mods = "Command"
 dimensions.columns = 160
 dimensions.lines = 45
 position.x = 75
-position.y = 130
+position.y = 90
 decorations = "buttonless"
-opacity = 0.8
+opacity = 0.9
 blur = true
 startup_mode = "Windowed"
 
