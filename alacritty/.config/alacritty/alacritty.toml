@@ -1,7 +1,12 @@
-import = ["~/.config/alacritty/themes/kanagawa_dragon.toml"]
+# disable when not boring
+[env]
+TERM = "xterm-256color"
+
+[general]
+import = ["~/.config/alacritty/themes/rosepine.toml"]
 
 [font]
-size = 16
+size = 17.5
 
 # font-jetbrains-mono-nerd-font
 normal.family = "JetBrainsMono Nerd Font"
@@ -55,9 +60,12 @@ mods = "Command"
 
 [window]
 decorations = "buttonless"
-opacity = 0.85
+opacity = 0.8
+blur = true
 startup_mode = "Maximized"
 
 [window.padding]
-x = 5
-y = 5
+x = 3
+
+[mouse]
+hide_when_typing = true

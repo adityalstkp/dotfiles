@@ -11,6 +11,13 @@ return {
         desc = 'Search Files',
       },
       {
+        '<leader>fo',
+        function()
+          require('fzf-lua').oldfiles {}
+        end,
+        desc = 'Search Old Files',
+      },
+      {
         '<leader>ps',
         function()
           require('fzf-lua').grep {}
@@ -20,9 +27,9 @@ return {
       {
         '<leader>sw',
         function()
-          require('fzf-lua').live_grep {}
+          require('fzf-lua').live_grep_glob {}
         end,
-        desc = 'Live Grep',
+        desc = 'Search Words Live',
       },
     },
     config = function()
@@ -34,6 +41,11 @@ return {
       end
 
       fzflua.setup {
+        keymap = {
+          fzf = {
+            ['ctrl-q'] = 'select-all+accept',
+          },
+        },
         defaults = {
           git_icons = false,
           file_icons = false,
@@ -91,6 +103,11 @@ return {
         grep = {
           -- adding --hidden from default value and exclude .git dir
           rg_opts = '--hidden --glob=!.git/ --column --line-number --no-heading --color=never --smart-case --max-columns=4096 -e',
+        },
+        files = {
+          cwd_prompt = false,
+          rg_opts = [[--hidden --glob=!.git/ --column --line-number --no-heading --color=never --smart-case --max-columns=4096 -e]],
+          fd_opts = [[--color=never --type file --hidden --exclude .git ]],
         },
       }
     end,

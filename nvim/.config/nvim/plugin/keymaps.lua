@@ -15,6 +15,9 @@ set('n', '<C-k>', '<cmd>cnext<CR>zz')
 set('n', '<C-j>', '<cmd>cprev<CR>zz')
 set('n', 'J', 'msJ`z')
 
+-- exit terminal with esc
+set('t', '<esc>', [[<C-\><C-n>]])
+
 -- Remap for dealing with word wrap
 set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -24,6 +27,12 @@ set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic mes
 set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 set('n', 'gl', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- utils
+-- Toggle inlay hints
+set('n', '<leader>ih', function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { 0 }, { 0 })
+end, { desc = 'Toggle inlay hints' })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
