@@ -144,8 +144,10 @@ return {
             root_dir = get_git_root_dir,
             on_attach = on_attach,
             settings = {
-              maxTsServerMemory = 8192,
               typescript = {
+                tsserver = {
+                  maxTsServerMemory = 8192,
+                },
                 inlayHints = ts_ls_inlay_hints,
               },
               javascript = {
