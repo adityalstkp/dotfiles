@@ -25,12 +25,6 @@ return {
       -- [[ Configure LSP ]]
       -- This function gets run when an LSP connects to a particular buffer.
       local on_attach = function(_, bufnr)
-        -- NOTE: Remember that lua is a real programming language, and as such it is possible
-        -- to define small helper and utility functions so you don't have to repeat yourself
-        -- many times.
-        --
-        -- In this case, we create a function that lets us more easily define mappings specific
-        -- for LSP related items. It sets the mode, buffer and description for us each time.
         local nmap = function(keys, func, desc)
           if desc then
             desc = 'LSP: ' .. desc
@@ -118,7 +112,7 @@ return {
 
       local lspconfig = require 'lspconfig'
 
-      local ts_ls_inlay_hints = {
+      local tsls_inlay_hints = {
         includeInlayEnumMemberValueHints = true,
         includeInlayFunctionLikeReturnTypeHints = true,
         includeInlayFunctionParameterTypeHints = true,
@@ -138,18 +132,27 @@ return {
             filetypes = (servers[server_name] or {}).filetypes,
           }
         end,
+        -- NOTES: if somewhat broken change back to ts_ls
         ['ts_ls'] = function()
           lspconfig.ts_ls.setup {
             capabilities = capabilities,
             root_dir = get_git_root_dir,
             on_attach = on_attach,
             settings = {
-              maxTsServerMemory = 8192,
               typescript = {
-                inlayHints = ts_ls_inlay_hints,
+                suggest = {
+                  autoImports = false,
+                },
+                tsserver = {
+                  maxTsServerMemory = 8192,
+                },
+                inlayHints = tsls_inlay_hints,
               },
               javascript = {
-                inlayHints = ts_ls_inlay_hints,
+                suggest = {
+                  autoImports = false,
+                },
+                inlayHints = tsls_inlay_hints,
               },
             },
           }
