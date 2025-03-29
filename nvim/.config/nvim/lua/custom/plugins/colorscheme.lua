@@ -1,5 +1,19 @@
 return {
   {
+    'rose-pine/neovim',
+    name = 'rose-pine',
+    config = function()
+      require('rose-pine').setup {
+        styles = {
+          bold = true,
+          italic = false,
+          transparency = true,
+        },
+      }
+      vim.cmd 'colorscheme rose-pine'
+    end,
+  },
+  {
     'aliqyan-21/darkvoid.nvim',
     enabled = false,
     lazy = false,
@@ -39,6 +53,7 @@ return {
   {
     'rebelot/kanagawa.nvim',
     name = 'kanagawa',
+    enabled = false,
     priority = 1000,
     config = function()
       require('kanagawa').setup {
