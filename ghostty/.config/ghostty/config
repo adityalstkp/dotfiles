@@ -5,5 +5,5 @@ macos-titlebar-proxy-icon = hidden
 macos-non-native-fullscreen = true
 mouse-hide-while-typing
 window-decoration = none
-background-opacity = 1
-background-blur
+background-opacity = 0.85
+background-blur = false
