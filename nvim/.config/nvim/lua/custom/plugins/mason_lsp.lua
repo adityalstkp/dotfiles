@@ -5,11 +5,11 @@ return {
     event = { 'VeryLazy' },
     opts = {
       ensure_installed = {
-        "lua-language-server",
+        "lua_ls",
         "vtsls",
-        "eslint-lsp",
+        "eslint",
         "gopls",
-        "rust-analyzer",
+        "rust_analyzer",
       }
     },
     dependencies = {
@@ -34,21 +34,21 @@ return {
       lspconfig.vtsls.setup {
         capabilities = capabilities,
         root_dir = get_git_root_dir,
-        settings = require 'lsp_config.lsp.vtsls'.settings
+        settings = require 'lsp_config.vtsls'.settings
       }
 
       lspconfig.lua_ls.setup {
         capabilities = capabilities,
         root_dir = get_git_root_dir,
-        settings = require 'lsp_config.lsp.lua_ls'.settings,
+        settings = require 'lsp_config.lua_ls'.settings,
       }
 
       lspconfig.rust_analyzer.setup {
         capabilities = capabilities,
-        settings = require 'lsp_config.lsp.lua_ls'.settings,
+        settings = require 'lsp_config.lua_ls'.settings,
       }
 
-      local eslint_lsp = require 'lsp_config.lsp.eslint'
+      local eslint_lsp = require 'lsp_config.eslint'
       lspconfig.eslint.setup {
         cmd = eslint_lsp.cmd,
         capabilities = capabilities,
@@ -60,7 +60,7 @@ return {
         cmd = eslint_lsp.cmd,
         capabilities = capabilities,
         root_dir = get_git_root_dir,
-        settings = require 'lsp_config.lsp.gopls'.settings
+        settings = require 'lsp_config.gopls'.settings
       }
     end,
   }
