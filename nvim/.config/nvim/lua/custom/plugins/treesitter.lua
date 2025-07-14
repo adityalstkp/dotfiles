@@ -161,7 +161,7 @@ return {
                 separator = nil,
             }
 
-            vim.keymap.set('n', '<leader>tc', '<CMD>TSContextToggle<CR>', { desc = 'Toggle treesitter-context' })
+            vim.keymap.set('n', '<leader>tc', '<CMD>TSContext toggle<CR>', { desc = 'Toggle treesitter-context' })
         end, 0)
     end,
 }
