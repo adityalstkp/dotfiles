@@ -57,7 +57,6 @@ return {
       }
 
       lspconfig.gopls.setup {
-        cmd = eslint_lsp.cmd,
         capabilities = capabilities,
         root_dir = get_git_root_dir,
         settings = require 'lsp_config.gopls'.settings
