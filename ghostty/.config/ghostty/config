@@ -6,4 +6,4 @@ macos-non-native-fullscreen = true
 mouse-hide-while-typing
 window-decoration = none
 background-opacity = 1
-background-blur
+background-blur = false

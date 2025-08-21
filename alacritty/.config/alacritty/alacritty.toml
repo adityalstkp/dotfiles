@@ -60,12 +60,13 @@ mods = "Command"
 
 [window]
 decorations = "buttonless"
-opacity = 0.8
+opacity = 0.9
 blur = true
 startup_mode = "Maximized"
 
 [window.padding]
 x = 3
 
-[mouse]
-hide_when_typing = true
+# let's see the experience
+# [mouse]
+# hide_when_typing = true
