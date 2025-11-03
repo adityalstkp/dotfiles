@@ -4,7 +4,6 @@
 Dotfiles for sync across computers
 
 Managed by GNU `stow`. 
-
 ----
 
 **MacOs**
