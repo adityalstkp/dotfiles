@@ -39,6 +39,9 @@ return {
             inlayHints = inlay_hints,
             tsserver = {
                 maxTsServerMemory = 8192,
+            },
+            preferences = {
+                preferTypeOnlyAutoImports = true
             }
         },
         javascript = {
