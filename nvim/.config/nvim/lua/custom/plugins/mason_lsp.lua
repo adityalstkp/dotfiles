@@ -20,46 +20,54 @@ return {
         config = function()
             -- Ensure the servers above are installed
             local mason = require 'mason'
-            local lspconfig = require 'lspconfig'
 
             mason.setup()
 
-            local get_git_root_dir = function(fname)
-                local util = require 'lspconfig.util'
-                return util.root_pattern '.git' (fname)
-            end
+            -- TODO: delete if it's not necessary anymore
+            -- local get_git_root_dir = function(fname)
+            --     local util = require 'lspconfig.util'
+            --     return util.root_pattern '.git' (fname)
+            -- end
 
             local capabilities = require('blink.cmp').get_lsp_capabilities()
 
-            lspconfig.vtsls.setup {
-                capabilities = capabilities,
-                root_dir = get_git_root_dir,
-                settings = require 'lsp_config.vtsls'.settings
-            }
+            -- NOTES: disabled for tsgo
+            -- vim.lsp.config('vtsls', {
+            --     settings = require 'lsp_config.vtsls'.settings
+            -- })
 
-            lspconfig.lua_ls.setup {
-                capabilities = capabilities,
-                root_dir = get_git_root_dir,
+            vim.lsp.config('lua_ls', {
                 settings = require 'lsp_config.lua_ls'.settings,
-            }
+            })
 
-            lspconfig.rust_analyzer.setup {
-                capabilities = capabilities,
-            }
+            vim.lsp.config('rust_analyzer', {})
 
             local eslint_lsp = require 'lsp_config.eslint'
-            lspconfig.eslint.setup {
+            vim.lsp.config('eslint', {
                 cmd = eslint_lsp.cmd,
-                capabilities = capabilities,
-                root_dir = get_git_root_dir,
                 settings = eslint_lsp.settings
-            }
+            })
 
-            lspconfig.gopls.setup {
-                capabilities = capabilities,
-                root_dir = get_git_root_dir,
+            vim.lsp.config('gopls', {
                 settings = require 'lsp_config.gopls'.settings
-            }
+            })
+
+            vim.lsp.config('tsgo', {
+                settings = require 'lsp_config.vtsls'.settings
+            })
+
+            vim.lsp.config('*', {
+                capabilities = capabilities,
+            })
+
+            vim.lsp.enable({
+                'lua_ls',
+                -- 'vtsls',
+                'tsgo',
+                'rust_analyzer',
+                'eslint',
+                'gopls',
+            })
         end,
     }
 }
