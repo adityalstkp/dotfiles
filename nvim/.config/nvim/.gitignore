@@ -3,4 +3,6 @@ test.sh
 .luarc.json
 nvim
 
+# this is my corp internal
 trae.lua
+internal_ai.lua

@@ -1,12 +1,17 @@
+local exist, internal_ai_tools = pcall(require, 'config.internal_ai')
+local ai_tools                 = {}
+
+if exist then
+    for k, value in pairs(internal_ai_tools) do
+        ai_tools[k] = value
+    end
+end
+
 return {
     "folke/sidekick.nvim",
     opts = {
         cli = {
-            tools = {
-                coco = {
-                    cmd = { "coco" }
-                }
-            }
+            tools = ai_tools
         }
     },
     keys = {
