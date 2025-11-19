@@ -23,18 +23,11 @@ return {
 
             mason.setup()
 
-            -- TODO: delete if it's not necessary anymore
-            -- local get_git_root_dir = function(fname)
-            --     local util = require 'lspconfig.util'
-            --     return util.root_pattern '.git' (fname)
-            -- end
-
             local capabilities = require('blink.cmp').get_lsp_capabilities()
 
-            -- NOTES: disabled for tsgo
-            -- vim.lsp.config('vtsls', {
-            --     settings = require 'lsp_config.vtsls'.settings
-            -- })
+            vim.lsp.config('vtsls', {
+                settings = require 'lsp_config.vtsls'.settings
+            })
 
             vim.lsp.config('lua_ls', {
                 settings = require 'lsp_config.lua_ls'.settings,
@@ -52,9 +45,10 @@ return {
                 settings = require 'lsp_config.gopls'.settings
             })
 
-            vim.lsp.config('tsgo', {
-                settings = require 'lsp_config.vtsls'.settings
-            })
+            -- NOTES: too many bugs for now
+            -- vim.lsp.config('tsgo', {
+            --     settings = require 'lsp_config.vtsls'.settings
+            -- })
 
             vim.lsp.config('*', {
                 capabilities = capabilities,
@@ -62,8 +56,7 @@ return {
 
             vim.lsp.enable({
                 'lua_ls',
-                -- 'vtsls',
-                'tsgo',
+                'vtsls',
                 'rust_analyzer',
                 'eslint',
                 'gopls',
