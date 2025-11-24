@@ -60,7 +60,7 @@ mods = "Command"
 
 [window]
 decorations = "buttonless"
-opacity = 0.875
+opacity = 0.9
 blur = false
 startup_mode = "Maximized"
 
