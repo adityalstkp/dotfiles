@@ -1,12 +1,11 @@
 return {
-    "rose-pine/neovim",
-    name = "rose-pine",
+    'ribru17/bamboo.nvim',
+    lazy = false,
+    priority = 1000,
     config = function()
-        require("rose-pine").setup {
-            styles = {
-                transparency = true
-            }
+        require('bamboo').setup {
+            transparent = true
         }
-        vim.cmd("colorscheme rose-pine-main")
-    end
+        require('bamboo').load()
+    end,
 }
