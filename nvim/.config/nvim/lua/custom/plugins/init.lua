@@ -20,13 +20,11 @@ return {
     end
   },
   -- Detect tabstop and shiftwidth automatically
-  { 'tpope/vim-sleuth',      event = 'VeryLazy' },
+  { 'tpope/vim-sleuth', event = 'VeryLazy' },
   -- Add indentation guides even on blank lines
   {
     'saghen/blink.indent',
     event = 'VeryLazy',
     opts = {},
   },
-  -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', event = 'VeryLazy', opts = {} },
 }
