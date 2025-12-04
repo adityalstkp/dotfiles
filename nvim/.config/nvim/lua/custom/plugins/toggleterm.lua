@@ -8,7 +8,7 @@ return {
             float_opts = {
                 border = 'curved',
                 width = math.floor(0.7 * vim.fn.winwidth(0)),
-                height = math.floor(0.8 * vim.fn.winheight(0)),
+                height = math.floor(0.85 * vim.fn.winheight(0)),
                 winblend = 4,
             },
             winbar = {
