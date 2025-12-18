@@ -29,6 +29,11 @@ return {
                 settings = require 'lsp_config.vtsls'.settings
             })
 
+            -- NOTES: too many bugs for now
+            -- vim.lsp.config('tsgo', {
+            --     settings = require 'lsp_config.vtsls'.settings
+            -- })
+
             vim.lsp.config('lua_ls', {
                 settings = require 'lsp_config.lua_ls'.settings,
             })
@@ -45,10 +50,6 @@ return {
                 settings = require 'lsp_config.gopls'.settings
             })
 
-            -- NOTES: too many bugs for now
-            -- vim.lsp.config('tsgo', {
-            --     settings = require 'lsp_config.vtsls'.settings
-            -- })
 
             vim.lsp.config('*', {
                 capabilities = capabilities,
@@ -57,6 +58,7 @@ return {
             vim.lsp.enable({
                 'lua_ls',
                 'vtsls',
+                -- 'tsgo',
                 'rust_analyzer',
                 'eslint',
                 'gopls',
