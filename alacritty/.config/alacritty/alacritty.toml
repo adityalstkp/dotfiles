@@ -3,7 +3,7 @@
 TERM = "xterm-256color"
 
 [general]
-import = ["~/.config/alacritty/themes/rosepine.toml"]
+import = ["~/.config/alacritty/themes/osaka_jade.toml"]
 
 [font]
 size = 17.5
@@ -61,12 +61,12 @@ mods = "Command"
 [window]
 decorations = "buttonless"
 opacity = 0.9
-blur = true
+blur = false
 startup_mode = "Maximized"
 
 [window.padding]
 x = 3
 
 # let's see the experience
-# [mouse]
-# hide_when_typing = true
+[mouse]
+hide_when_typing = true

@@ -1,25 +1,16 @@
 ---@type vim.lsp.Config
 return {
-    cmd = { "lua-language-server" },
-    root_markers = {
-        ".luarc.json",
-        ".luarc.jsonc",
-        ".luacheckrc",
-        ".stylua.toml",
-        "stylua.toml",
-        "selene.toml",
-        "selene.yml",
-        ".git",
-    },
-    filetypes = { "lua" },
     settings = {
         Lua = {
             runtime = { version = 'LuaJIT' },
             workspace = {
+                userThirdParty = {
+                    "~/.local/share/LuaAddons"
+                },
                 library = {
                     vim.env.VIMRUNTIME
                 },
-                checkThirdParty = false,
+                checkThirdParty = 'Ask',
             },
             telemetry = { enable = false },
             diagnostics = { globals = { 'vim' } },

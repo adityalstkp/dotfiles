@@ -4,6 +4,11 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- trae stuff
+vim.g.trae_disable_autocompletion = true
+vim.g.trae_no_map_tab = true
+vim.g.trae_disable_bindings = true
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info

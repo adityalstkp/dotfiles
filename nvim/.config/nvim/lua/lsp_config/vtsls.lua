@@ -21,16 +21,6 @@ local inlay_hints = {
 
 ---@type vim.lsp.Config
 return {
-    cmd = { "vtsls", "--stdio" },
-    filetypes = {
-        "javascript",
-        "javascriptreact",
-        "javascript.jsx",
-        "typescript",
-        "typescriptreact",
-        "typescript.tsx",
-    },
-    root_markers = { ".git" },
     settings = {
         vtsls = {
             autoUseWorkspaceTsdk = true,
@@ -39,6 +29,9 @@ return {
             inlayHints = inlay_hints,
             tsserver = {
                 maxTsServerMemory = 8192,
+            },
+            preferences = {
+                preferTypeOnlyAutoImports = true
             }
         },
         javascript = {

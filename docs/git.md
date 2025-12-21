@@ -11,7 +11,7 @@ Config:
 [merge]
   tool = nvim
 [mergetool "nvim"]
-  cmd = nvim -c "DiffviewOpen"
+  cmd = nvim -c "CodeDiff"
 [mergetool]
   prompt = false
 ```
