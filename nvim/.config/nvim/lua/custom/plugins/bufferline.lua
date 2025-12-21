@@ -3,13 +3,11 @@ return {
   event = 'VeryLazy',
   version = '*',
   config = function()
-    vim.opt.termguicolors = true
-
     local buffline = require 'bufferline'
     buffline.setup {
       options = {
         show_buffer_icons = false,
-        show_buffer_close_icons = true,
+        show_buffer_close_icons = false,
       },
     }
 

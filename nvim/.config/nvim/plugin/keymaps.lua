@@ -24,10 +24,10 @@ set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Diagnostic keymaps
 set('n', '[d', function()
-  vim.diagnostic.jump({ count = -1, float = true })
+  vim.diagnostic.jump { count = -1, float = true }
 end, { desc = 'Go to previous diagnostic message' })
 set('n', ']d', function()
-  vim.diagnostic.jump({ count = 1, float = true })
+  vim.diagnostic.jump { count = 1, float = true }
 end, { desc = 'Go to next diagnostic message' })
 
 set('n', 'gl', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
@@ -39,5 +39,5 @@ set('n', '<leader>bo', '<cmd>%bd|e#<cr>', { desc = 'Close all buffers but the cu
 -- toggle virtual_lines
 set('n', 'gK', function()
   local new_config = not vim.diagnostic.config().virtual_lines
-  vim.diagnostic.config({ virtual_lines = new_config })
+  vim.diagnostic.config { virtual_lines = new_config }
 end, { desc = 'Toggle diagnostic virtual_lines' })
