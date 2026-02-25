@@ -1,5 +1,4 @@
 return {
-  { 'tpope/vim-fugitive', cmd = { 'G', 'Git' } },
   {
     "esmuellert/codediff.nvim",
     dependencies = { "MunifTanjim/nui.nvim" },
