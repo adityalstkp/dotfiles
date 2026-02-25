@@ -14,8 +14,8 @@ return {
     },
     dependencies = {
       'neovim/nvim-lspconfig',
-      { 'williamboman/mason.nvim', config = true },
-      { 'j-hui/fidget.nvim',       opts = {} },
+      { 'williamboman/mason.nvim',        config = true },
+      { 'linrongbin16/lsp-progress.nvim', opts = {} },
     },
     config = function()
       -- Ensure the servers above are installed

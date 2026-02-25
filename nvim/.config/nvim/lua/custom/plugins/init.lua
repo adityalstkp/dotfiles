@@ -12,4 +12,8 @@ return {
     event = 'VeryLazy',
     opts = {},
   },
+  {
+    "rcarriga/nvim-notify",
+    event = 'VeryLazy',
+  },
 }
