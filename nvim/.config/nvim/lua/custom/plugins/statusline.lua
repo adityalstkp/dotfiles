@@ -8,7 +8,6 @@ return {
       icons_enabled = false,
       theme = 'auto',
       component_separators = '|',
-      -- section_separators = { left = '', right = '' },
       section_separators = { left = '', right = '' },
     },
     sections = {
@@ -23,6 +22,12 @@ return {
       lualine_b = {
         'branch',
         'diagnostics',
+      },
+      lualine_c = {
+        'filename',
+        function()
+          return require('lsp-progress').progress()
+        end,
       },
     },
   },

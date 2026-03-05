@@ -11,16 +11,27 @@ if [ -n "${ZSH_DEBUGRC+1}" ]; then
     zmodload zsh/zprof
 fi
 
+# Performance optimizations
+DISABLE_AUTO_UPDATE="true"
+DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_COMPFIX="true"
+
+# Cache completions aggressively
+autoload -Uz compinit
+if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
+    compinit
+else
+    compinit -C
+fi
+
 # config dir
 export XDG_CONFIG_HOME="$HOME/.config"
 # enable when nvm dir is not under root/custom dir location
 
 # Aliasing
-alias ovim="vim"
-alias vim="nvim"
 alias v="nvim"
-alias vi="nvim"
 alias lg="lazygit"
+alias gvm="~/.g/bin/g" # macos
 
 # fuzzy find
 export FZF_DEFAULT_COMMAND='fd --type file -H -E .git' # list hidden files but ignores .git
@@ -47,6 +58,14 @@ ZSH_THEME="robbyrussell"
 # plugins
 plugins=(git)
 
+source $ZSH/oh-my-zsh.sh
+# zsh-autosuggestions installed with brew
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Autosuggest settings
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#1bfd9c,bg=black,bold"
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # source omz
 if [ -n "${ZSH_DEBUGRC+1}" ]; then

@@ -9,7 +9,6 @@ return {
     'typescriptreact',
     'typescript.tsx',
   },
-  root_markers = { '.git' },
   settings = {
     validate = 'on',
     packageManager = nil,

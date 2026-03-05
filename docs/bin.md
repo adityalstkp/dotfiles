@@ -9,3 +9,4 @@ Must have binaries (can install with homebrew):
 - rg
 - yazi
 - jq (optional)
+- g [https://github.com/voidint/g](g)

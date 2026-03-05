@@ -14,8 +14,8 @@ return {
     },
     dependencies = {
       'neovim/nvim-lspconfig',
-      { 'williamboman/mason.nvim', config = true },
-      { 'j-hui/fidget.nvim', opts = {} },
+      { 'williamboman/mason.nvim',        config = true },
+      { 'linrongbin16/lsp-progress.nvim', opts = {} },
     },
     config = function()
       -- Ensure the servers above are installed
@@ -28,11 +28,6 @@ return {
       vim.lsp.config('vtsls', {
         settings = require('lsp_config.vtsls').settings,
       })
-
-      -- NOTES: too many bugs for now
-      -- vim.lsp.config('tsgo', {
-      --     settings = require 'lsp_config.vtsls'.settings
-      -- })
 
       vim.lsp.config('lua_ls', {
         settings = require('lsp_config.lua_ls').settings,
@@ -50,14 +45,16 @@ return {
         settings = require('lsp_config.gopls').settings,
       })
 
+      vim.lsp.config('copilot-language-server', {})
+
       vim.lsp.config('*', {
         capabilities = capabilities,
       })
 
       vim.lsp.enable {
         'lua_ls',
+        'copilot-language-server',
         'vtsls',
-        -- 'tsgo',
         'rust_analyzer',
         'eslint',
         'gopls',

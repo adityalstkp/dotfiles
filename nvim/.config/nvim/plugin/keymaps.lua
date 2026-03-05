@@ -34,8 +34,9 @@ set('n', 'gl', vim.diagnostic.open_float, { desc = 'Open floating diagnostic mes
 set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- utils
--- close all buffer
-set('n', '<leader>bo', '<cmd>%bd|e#<cr>', { desc = 'Close all buffers but the current one' })
+-- close all buffer - now replaced with bento
+-- set('n', '<leader>bo', '<cmd>%bd|e#<cr>', { desc = 'Close all buffers but the current one' })
+
 -- toggle virtual_lines
 set('n', 'gK', function()
   local new_config = not vim.diagnostic.config().virtual_lines
