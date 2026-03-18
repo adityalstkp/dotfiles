@@ -12,6 +12,11 @@ return {
     'folke/sidekick.nvim',
     opts = {
       cli = {
+        win = {
+          split = {
+            width = 55,
+          },
+        },
         tools = ai_tools,
       },
     },
@@ -79,7 +84,6 @@ return {
         mode = { 'n', 'x' },
         desc = 'Sidekick Select Prompt',
       },
-    }
+    },
   },
 }
-
