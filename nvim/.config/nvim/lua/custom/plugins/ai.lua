@@ -42,6 +42,14 @@ return {
         end,
         desc = '[Sidekick] Detach a CLI Session',
       },
+      {
+        '<leader>ap',
+        function()
+          require('sidekick.cli').prompt()
+        end,
+        mode = { 'n', 'x' },
+        desc = '[Sidekick] Select Prompt',
+      },
     },
   },
   {

@@ -8,12 +8,8 @@ return {
     opts = {},
   },
   {
-    "suvasanket/oz.nvim",
+    'suvasanket/oz.nvim',
     event = 'VeryLazy',
     opts = {},
-  },
-  {
-    "rcarriga/nvim-notify",
-    event = 'VeryLazy',
   },
 }
