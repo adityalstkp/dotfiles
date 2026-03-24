@@ -1,6 +1,9 @@
 return {
   -- Set lualine as statusline
   'nvim-lualine/lualine.nvim',
+  dependencies = {
+    'franco-ruggeri/codecompanion-lualine.nvim',
+  },
   event = 'VeryLazy', -- https://www.lazyvim.org/configuration/examples
   -- See `:help lualine.txt`
   opts = {
@@ -28,6 +31,7 @@ return {
         function()
           return require('lsp-progress').progress()
         end,
+        'codecompanion',
       },
     },
   },

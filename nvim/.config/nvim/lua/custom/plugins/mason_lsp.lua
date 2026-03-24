@@ -5,6 +5,7 @@ return {
     event = { 'VeryLazy' },
     opts = {
       ensure_installed = {
+        'stylua',
         'lua_ls',
         'vtsls',
         'eslint',
@@ -14,7 +15,7 @@ return {
     },
     dependencies = {
       'neovim/nvim-lspconfig',
-      { 'williamboman/mason.nvim',        config = true },
+      { 'williamboman/mason.nvim', config = true },
       { 'linrongbin16/lsp-progress.nvim', opts = {} },
     },
     config = function()
@@ -40,6 +41,7 @@ return {
         cmd = eslint_lsp.cmd,
         settings = eslint_lsp.settings,
       })
+      vim.lsp.config('oxlint', {})
 
       vim.lsp.config('gopls', {
         settings = require('lsp_config.gopls').settings,
@@ -57,6 +59,7 @@ return {
         'vtsls',
         'rust_analyzer',
         'eslint',
+        'oxlint',
         'gopls',
       }
     end,
