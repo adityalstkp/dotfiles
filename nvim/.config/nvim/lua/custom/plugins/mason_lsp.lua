@@ -19,9 +19,7 @@ return {
       { 'linrongbin16/lsp-progress.nvim', opts = {} },
     },
     config = function()
-      -- Ensure the servers above are installed
       local mason = require 'mason'
-
       mason.setup()
 
       local capabilities = require('blink.cmp').get_lsp_capabilities()
@@ -34,14 +32,11 @@ return {
         settings = require('lsp_config.lua_ls').settings,
       })
 
-      vim.lsp.config('rust_analyzer', {})
-
       local eslint_lsp = require 'lsp_config.eslint'
       vim.lsp.config('eslint', {
         cmd = eslint_lsp.cmd,
         settings = eslint_lsp.settings,
       })
-      vim.lsp.config('oxlint', {})
 
       vim.lsp.config('gopls', {
         settings = require('lsp_config.gopls').settings,
@@ -55,12 +50,12 @@ return {
 
       vim.lsp.enable {
         'lua_ls',
-        'copilot-language-server',
+        'gopls',
         'vtsls',
         'rust_analyzer',
         'eslint',
         'oxlint',
-        'gopls',
+        'tailwindcss',
       }
     end,
   },

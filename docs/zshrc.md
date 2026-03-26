@@ -63,7 +63,7 @@ source $ZSH/oh-my-zsh.sh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Autosuggest settings
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#1bfd9c,bg=black,bold"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#31748f,bg=black,bold"
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
