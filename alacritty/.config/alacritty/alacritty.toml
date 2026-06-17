@@ -1,21 +1,19 @@
-# disable when not boring
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 17.5
+size = 16
 
-# font-jetbrains-mono-nerd-font
-normal.family = "JetBrainsMono Nerd Font"
+normal.family = "GeistMono Nerd Font"
 normal.style = "Regular"
 
-bold.family = "JetBrainsMono Nerd Font"
+bold.family = "GeistMono Nerd Font"
 bold.style = "Bold"
 
-italic.family = "JetBrainsMono Nerd Font"
+italic.family = "GeistMono Nerd Font"
 italic.style = "Italic"
 
-bold_italic.family = "JetBrainsMono Nerd Font"
+bold_italic.family = "GeistMono Nerd Font"
 bold_italic.style = "BoldItalic"
 
 [[keyboard.bindings]]
@@ -57,7 +55,7 @@ mods = "Command"
 
 [window]
 decorations = "buttonless"
-opacity = 0.9
+opacity = 0.7
 blur = false
 startup_mode = "Maximized"
 
@@ -65,6 +63,5 @@ startup_mode = "Maximized"
 x = 5
 y = 5
 
-# let's see the experience
 [mouse]
 hide_when_typing = true
