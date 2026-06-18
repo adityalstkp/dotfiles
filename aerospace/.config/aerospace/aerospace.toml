@@ -8,7 +8,7 @@ after-login-command = []
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
     'exec-and-forget sketchybar', 
-    'exec-and-forget borders active_color=0xff1793d1 inactive_color=0xff494d64 width=4.0'
+    'exec-and-forget borders active_color=0xff1793d1 inactive_color=0xff494d64 width=5.0'
 ]
 
 exec-on-workspace-change = [
@@ -66,7 +66,7 @@ inner.horizontal = 8
 inner.vertical =   8
 outer.left =       8
 outer.bottom =     8
-outer.top =        [{monitor."dell" = 50 }, 20]
+outer.top =        [{monitor."dell" = 60 }, 30]
 outer.right =      8
 
 # 'main' binding mode declaration
