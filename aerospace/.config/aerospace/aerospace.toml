@@ -61,7 +61,7 @@ inner.horizontal = 8
 inner.vertical =   8
 outer.left =       8
 outer.bottom =     8
-outer.top =        20
+outer.top =        [{monitor."dell" = 50 }, 20]
 outer.right =      8
 
 # 'main' binding mode declaration
