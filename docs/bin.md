@@ -11,3 +11,4 @@ Must have binaries (can install with homebrew):
 - yazi
 - jq
 - [g](https://github.com/voidint/g)
+- [JankyBorders](https://github.com/FelixKratz/JankyBorders)
