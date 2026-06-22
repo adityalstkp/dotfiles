@@ -2,6 +2,7 @@
 
 Must have binaries (can install with homebrew):
 - nvim (0.12.2)
+- aerospace
 - stow
 - lazygit
 - fzf
