@@ -53,15 +53,9 @@ require('lz.n').load {
         },
       },
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer', 'lazydev', 'trae' },
+        default = { 'lsp', 'path', 'snippets', 'buffer', 'lazydev' },
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
-          trae = {
-            name = 'trae',
-            module = 'blink.compat.source',
-            opts = {},
-            async = true,
-          },
         },
       },
       fuzzy = { implementation = 'prefer_rust_with_warning' },

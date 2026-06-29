@@ -3,6 +3,4 @@ test.sh
 .luarc.json
 nvim
 
-# this is my corp internal
-pack/byted/
 internal_ai.lua

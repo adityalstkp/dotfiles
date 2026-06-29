@@ -2,6 +2,7 @@
 
 Must have binaries (can install with homebrew):
 - nvim (0.12.2)
+- aerospace
 - stow
 - lazygit
 - fzf
@@ -11,3 +12,4 @@ Must have binaries (can install with homebrew):
 - yazi
 - jq
 - [g](https://github.com/voidint/g)
+- [JankyBorders](https://github.com/FelixKratz/JankyBorders)

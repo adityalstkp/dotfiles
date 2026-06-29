@@ -60,8 +60,8 @@ blur = false
 startup_mode = "Maximized"
 
 [window.padding]
-x = 5
-y = 5
+x = 10
+y = 10
 
 [mouse]
 hide_when_typing = true

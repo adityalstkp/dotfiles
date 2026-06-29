@@ -9,8 +9,10 @@ PLUGIN_DIR="$CONFIG_DIR/plugins"
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
-sketchybar --bar position=top height=40 blur_radius=30 color=0x00ffffff \
-    margin=200 corner_radius=8 border_width=1 border_color=0xffffffff \
+ACCENT_COLOR=0xff1793d1
+
+sketchybar --bar position=top height=47 \
+    margin=200 corner_radius=15 border_width=2 border_color=$ACCENT_COLOR \
     y_offset=4
 
 
@@ -24,8 +26,8 @@ default=(
   padding_right=5
   icon.font="GeistMono Nerd Font:Bold:14.0"
   label.font="GeistMono Nerd Font:Bold:14.0"
-  icon.color=0xffffffff
-  label.color=0xffffffff
+  icon.color=$ACCENT_COLOR
+  label.color=$ACCENT_COLOR
   icon.padding_left=4
   icon.padding_right=4
   label.padding_left=4
@@ -37,19 +39,21 @@ sketchybar --default "${default[@]}"
 ##### Background Styles #####
 # Reusable background styling for bar items
 bg_style=(
-  background.color=0x44ffffff
-  background.corner_radius=5
+    background.color=0x000000
+    background.corner_radius=5
+    background.border_width=1
+    background.border_color=$ACCENT_COLOR
 )
 bg_workspace=(
-  "${bg_style[@]}"
-  background.height=20
-  background.drawing=off
+    "${bg_style[@]}"
+    background.height=20
+    background.drawing=off
 )
 bg_item=(
-  "${bg_style[@]}"
-  background.height=24
-  background.padding_left=8
-  background.padding_right=8
+    "${bg_style[@]}"
+    background.height=24
+    background.padding_left=8
+    background.padding_right=8
 )
 
 ##### Adding Aerospace Workspace #####
